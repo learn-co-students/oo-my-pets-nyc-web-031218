@@ -1,5 +1,5 @@
 require_relative 'spec_helper.rb'
-
+require 'pry'
 describe Owner do
 
   let(:owner) { Owner.new("human") }
@@ -64,7 +64,9 @@ describe Owner do
       it 'can buy a fish that is an instance of the Fish class' do
         expect(owner.pets[:fishes].count).to eq(0)
         owner.buy_fish("Bubbles")
+      
         owner.pets[:fishes].each do |fish|
+
           expect(fish).to be_a(Fish)
         end
         expect(owner.pets[:fishes].count).to eq(1)
