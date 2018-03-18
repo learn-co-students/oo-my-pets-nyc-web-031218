@@ -11,7 +11,7 @@ describe Fish do
   it "initializes with a name" do
     expect(fish.name).to eq("Nemo")
   end
-
+#
   it "can't change its name" do
     expect { fish.name = "Goldy" }.to raise_error NoMethodError
   end
